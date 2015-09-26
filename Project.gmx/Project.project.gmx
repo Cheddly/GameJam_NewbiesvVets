@@ -21,6 +21,7 @@
     <sprite>sprites\spr_enemyreverse</sprite>
     <sprite>sprites\spr_platformreverse</sprite>
     <sprite>sprites\spr_checkpoint</sprite>
+    <sprite>sprites\spr_hurtzone</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -46,6 +47,7 @@
     <object>objects\obj_player_die</object>
     <object>objects\obj_checkpoint</object>
     <object>objects\par_enemy</object>
+    <object>objects\obj_hurtzone</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

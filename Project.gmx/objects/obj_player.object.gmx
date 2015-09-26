@@ -30,6 +30,7 @@ vsp=0
 grav=.5
 form = FORM_WATER
 animation = ANIM_STAND
+energy=100
 </string>
           </argument>
         </arguments>
@@ -135,6 +136,8 @@ y=y+vsp
           <argument>
             <kind>1</kind>
             <string>///Change Form
+if energy &gt; 1
+{
 var changed=false;
 if check_key(ctrls.key_form_prev,1)
     {
@@ -152,10 +155,19 @@ if changed
     {
     if form == FORM_ICE
         {
-        hsp=hsp*2
+        if energy &gt; 5
+            {
+            energy-=5
+            hsp=hsp*2
+            }
+        }
+    else if form == FORM_GAS
+        {
+        ctrl_Stats.alarm[0]=2
         }
     //do stuff
     }
+}
 </string>
           </argument>
         </arguments>

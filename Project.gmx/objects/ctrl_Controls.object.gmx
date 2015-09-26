@@ -55,6 +55,62 @@ room_goto_next()
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if instance_exists(obj_player)
+    {
+    //FORM GUI
+    var form = obj_player.form
+    draw_sprite(hud_formselect,0,0,0)
+    if form &gt; 0
+    draw_sprite(hud_formselect,form,0,0)
+    else
+    draw_sprite(hud_formselect,3,0,0)
+    
+    if ctrls.gamepad
+    draw_text(20,48,"LB")
+    else
+    draw_text(20,48,"Q")
+    
+    draw_sprite(hud_formselect,0,64,0)
+    if form &lt; 2
+    draw_sprite(hud_formselect,form+2,64,0)
+    else
+    draw_sprite(hud_formselect,1,64,0)
+    
+    if ctrls.gamepad
+    draw_text(86,48,"RB")
+    else
+    draw_text(86,48,"E")
+    
+    //ENERGY
+    draw_set_color(c_black)
+    draw_rectangle(0,64,128,80,true)
+    draw_set_color(c_gray)
+    draw_rectangle(0,64,128,80,false)
+    draw_set_color(c_aqua)
+    draw_rectangle(0,64,128*(obj_player.energy/100),80,false)
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

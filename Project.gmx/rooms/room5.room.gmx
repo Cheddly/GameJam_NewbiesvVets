@@ -145,7 +145,6 @@
     <instance objName="par_wall" x="320" y="96" name="inst_302CA2B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="par_wall" x="288" y="96" name="inst_3B312A46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_finish" x="288" y="32" name="inst_DE66C734" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_checkpoint" x="96" y="512" name="inst_03CD9E07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="par_wall" x="256" y="416" name="inst_7C96E496" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="par_wall" x="256" y="448" name="inst_2F82B077" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_left" x="288" y="256" name="inst_2480D0A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

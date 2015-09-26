@@ -1,0 +1,14 @@
+ ,________________,
+ |                |
+ |    ,___________|
+ |    |__________,
+ |    |/|       [|
+ |    |/|        |
+ |____|/|____   [|
+        |        |
+,_____,_|____   [|
+|     |/|        |
+|o_n__|/|_______[|
+
+Short map to tutorialize the whole "jumping at buttons and turning to ice midair" thing
+ that's used a lot in the boss fight. Also it looks like a five. Whoops.

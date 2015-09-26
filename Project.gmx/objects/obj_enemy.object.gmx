@@ -90,13 +90,13 @@
             <string>///Collision with player
 if (place_meeting(x,y,obj_player))
     {
-    if (obj_player.form == FORM_ICE and abs(obj_player.hsp) &gt;= abs (hsp) and state != AI_RECOVER )  
+    if (obj_player.form == FORM_ICE and abs(obj_player.hsp) &gt;= abs(hsp)+1 and state != AI_RECOVER )  
         {
         var playerhsp = obj_player.hsp
         ///push back both, but unharmed
-        if obj_player.image_xscale != image_xscale
+        if obj_player.image_xscale == image_xscale
         {
-            //if facing from behind, don't push player
+            hsp = playerhsp/1.5
             sound_play(snd_hurt)
             obj_player.form = FORM_WATER
             obj_player.hsp = sign(obj_player.x-x)
@@ -104,10 +104,12 @@ if (place_meeting(x,y,obj_player))
         }
         else
             {
-            obj_player.hsp /= 1.5
+            //if facing from behind, don't push player
+            obj_player.hsp = obj_player.hsp*-1.25
+            obj_player.vsp = -8
+            hsp = 0
             }
         //sound_play(snd_hurt)
-        hsp = playerhsp/1.5
         vsp = 0
         state = AI_RECOVER
         alarm[1]=60

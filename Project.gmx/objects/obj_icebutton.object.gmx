@@ -54,6 +54,7 @@ image_speed=0
     {
     if active == false and obj_player.form == FORM_ICE
         {
+        sound_play(snd_button)
         active=true
         mytarget.active=true
         image_index=0

@@ -30,6 +30,8 @@ if (place_meeting(x,y,obj_player))
     {
     if obj_player.invincible==0
         {
+        sound_play(snd_hurt)
+        obj_player.form = FORM_WATER
         obj_player.hsp = obj_player.hsp*-2
         obj_player.vsp = -8
         if obj_player.alarm[10] == -1

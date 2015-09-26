@@ -30,6 +30,8 @@ alarm[0] = 2 //temp
 hspeed = 1
 vspeed=-1
 grav = .05
+sound_stop_all()
+sound_play(snd_death)
 </string>
           </argument>
         </arguments>

@@ -183,6 +183,7 @@ if (place_meeting(x,y,obj_player))
         }
     else if obj_player.invincible==0
         {
+        sound_play(snd_sponge_slurp)
         obj_player.hsp = sign(obj_player.x-x)*hsp*1.5
         obj_player.vsp = -8
         if obj_player.alarm[10] == -1

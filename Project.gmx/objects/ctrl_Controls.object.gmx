@@ -34,6 +34,21 @@ key_down= ord('S')
 key_form_prev = ord('Q')
 key_form_next = ord('E')
 
+gamepad=false
+if gamepad_is_connected(0)
+    {
+    if show_question("Enable gamepad?")
+        {
+        gamepad=true
+        key_left = gp_padl
+        key_right = gp_padr
+        key_up = gp_face1
+        key_down = gp_padd
+        key_form_prev = gp_shoulderl
+        key_form_next = gp_shoulderr
+        }
+    }
+
 room_goto_next()
 </string>
           </argument>

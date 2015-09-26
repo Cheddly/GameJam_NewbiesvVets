@@ -54,7 +54,7 @@ animation = ANIM_STAND
             <kind>1</kind>
             <string>///Movement
 //Move left and right
-var key_hsp = keyboard_check(ctrls.key_right)-keyboard_check(ctrls.key_left)
+var key_hsp = check_key(ctrls.key_right,0)-check_key(ctrls.key_left,0)
 
 if form != FORM_ICE
     {
@@ -72,7 +72,7 @@ else
 if form != FORM_GAS
 {
     var vsp_jump;
-    if (place_meeting(x,y+1,par_ground)) and keyboard_check_pressed(ctrls.key_up)
+    if (place_meeting(x,y+1,par_ground)) and check_key(ctrls.key_up,1)
         {
         vsp=-12
         }
@@ -84,9 +84,9 @@ if form != FORM_GAS
 else
 {
     var key_vsp
-    key_vsp = keyboard_check(ctrls.key_down)-keyboard_check(ctrls.key_up)
+    key_vsp = check_key(ctrls.key_down,0)-check_key(ctrls.key_up,0)
     vsp = key_vsp*2
-    hsp/=2
+    hsp= hsp/2
 }
 //Collision with the ground
 if (place_meeting(x,y+vsp,par_wall))
@@ -136,13 +136,13 @@ y=y+vsp
             <kind>1</kind>
             <string>///Change Form
 var changed=false;
-if keyboard_check_pressed(ctrls.key_form_prev)
+if check_key(ctrls.key_form_prev,1)
     {
     form--;
     if form == -1 form = 2
     changed=true
     }
-else if keyboard_check_pressed(ctrls.key_form_next)
+else if check_key(ctrls.key_form_next,1)
     {
     form++;
     if form == 3 form = 0

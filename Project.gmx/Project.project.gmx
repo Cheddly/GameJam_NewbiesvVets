@@ -7,11 +7,14 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player_ice</sprite>
+    <sprite>sprites\spr_player_gas</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\mask_platform</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_icebutton</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -23,15 +26,21 @@
     <object>objects\par_ground</object>
     <object>objects\obj_door</object>
     <object>objects\obj_button</object>
+    <object>objects\obj_icebutton</object>
+    <object>objects\ctrl_Stats</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="3">
+  <constants number="7">
     <constant name="FORM_WATER">0</constant>
     <constant name="FORM_ICE">1</constant>
     <constant name="FORM_GAS">2</constant>
+    <constant name="ANIM_CUSTOM">0</constant>
+    <constant name="ANIM_STAND">1</constant>
+    <constant name="ANIM_WALK">2</constant>
+    <constant name="ANIM_JUMP">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

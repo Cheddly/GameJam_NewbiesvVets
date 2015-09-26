@@ -29,6 +29,7 @@
 vsp=0
 grav=.5
 form = FORM_WATER
+animation = ANIM_STAND
 </string>
           </argument>
         </arguments>
@@ -51,27 +52,42 @@ form = FORM_WATER
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Movement 
-var ctrls = ctrl_Controls
+            <string>///Movement
 //Move left and right
-var key_hsp;
-key_hsp = keyboard_check(ctrls.key_right)-keyboard_check(ctrls.key_left)
-if (key_hsp) == 0
-    {hsp/=1.2}
+var key_hsp = keyboard_check(ctrls.key_right)-keyboard_check(ctrls.key_left)
+
+if form != FORM_ICE
+    {
+    if (key_hsp) == 0
+        {hsp/=1.2}
+    else
+        {hsp=key_hsp*4}
+    }
 else
-    {hsp=key_hsp*4}
+    {
+    hsp/=1.05
+    }
     
 //Jump and gravity
-var vsp_jump;
-if (place_meeting(x,y+1,par_ground)) and keyboard_check_pressed(ctrls.key_up)
-    {
-    vsp=-12
-    }
+if form != FORM_GAS
+{
+    var vsp_jump;
+    if (place_meeting(x,y+1,par_ground)) and keyboard_check_pressed(ctrls.key_up)
+        {
+        vsp=-12
+        }
+    else
+        {
+        vsp = min(vsp+grav,12)
+        }
+}
 else
-    {
-    vsp = min(vsp+grav,12)
-    }
-
+{
+    var key_vsp
+    key_vsp = keyboard_check(ctrls.key_down)-keyboard_check(ctrls.key_up)
+    vsp = key_vsp*2
+    hsp/=2
+}
 //Collision with the ground
 if (place_meeting(x,y+vsp,par_wall))
     {
@@ -102,6 +118,48 @@ y=y+vsp
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change Form
+var changed=false;
+if keyboard_check_pressed(ctrls.key_form_prev)
+    {
+    form--;
+    if form == -1 form = 2
+    changed=true
+    }
+else if keyboard_check_pressed(ctrls.key_form_next)
+    {
+    form++;
+    if form == 3 form = 0
+    changed=true
+    }
+if changed
+    {
+    if form == FORM_ICE
+        {
+        hsp=hsp*2
+        }
+    //do stuff
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="7" enumb="0">
       <action>
@@ -124,6 +182,43 @@ y=y+vsp
 y=ystart
 hsp=0
 vsp=0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Sprites
+if animation == ANIM_STAND
+    {
+    switch (form) {
+        case FORM_WATER: sprite_index = spr_player; break;
+        case FORM_GAS: sprite_index = spr_player_gas; break;
+        case FORM_ICE: sprite_index = spr_player_ice; break;
+        }
+    }
+else
+    {
+    
+    }
+draw_self()
+
 </string>
           </argument>
         </arguments>

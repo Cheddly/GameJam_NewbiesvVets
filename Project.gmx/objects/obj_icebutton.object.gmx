@@ -50,9 +50,9 @@ image_speed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x,y,obj_player)
+            <string>if place_meeting(x,y,obj_player) 
     {
-    if active == false
+    if active == false and obj_player.form == FORM_ICE
         {
         active=true
         mytarget.active=true

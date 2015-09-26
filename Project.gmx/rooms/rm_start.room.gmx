@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="ctrl_Controls" x="32" y="64" name="inst_13FEB15B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ctrl_Stats" x="32" y="128" name="inst_8D086C4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

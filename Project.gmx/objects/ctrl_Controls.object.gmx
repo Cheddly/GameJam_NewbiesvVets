@@ -25,10 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_left = ord('A')
+            <string>globalvar ctrls;
+ctrls = ctrl_Controls
+key_left = ord('A')
 key_right = ord('D')
 key_up = ord('W')
 key_down= ord('S')
+key_form_prev = ord('Q')
+key_form_next = ord('E')
 
 room_goto_next()
 </string>

@@ -10,6 +10,8 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\mask_platform</sprite>
+    <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -19,6 +21,8 @@
     <object>objects\ctrl_Controls</object>
     <object>objects\par_platform</object>
     <object>objects\par_ground</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

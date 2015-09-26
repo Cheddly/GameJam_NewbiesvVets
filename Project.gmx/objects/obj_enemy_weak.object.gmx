@@ -94,6 +94,7 @@ if (place_meeting(x,y,obj_player))
         {
         var playerhsp = obj_player.hsp
         ///pushed back
+        sound_play(snd_sponge_hit)
         hsp = obj_player.hsp*1.5
         vsp=-6
         state = AI_RECOVER

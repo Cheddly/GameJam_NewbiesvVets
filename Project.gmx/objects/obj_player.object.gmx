@@ -303,7 +303,7 @@ if (place_meeting(x,y+vsp,par_platform))
             {
             x = x+plat.hsp
             }
-        while (!place_meeting(x,y+sign(vsp),par_platform)) {y+=sign(vsp)}
+        //while (!place_meeting(x,y+sign(vsp),par_platform)) {y+=sign(vsp)}
             vsp=0
         }
     }
@@ -461,6 +461,14 @@ else if animation == ANIM_RECOVER
     {
     image_speed=.1
     sprite_index = spr_player_recover
+    }
+else if form == FORM_ICE
+    {
+    sprite_index = spr_player_ice
+    }
+else
+    {
+    sprite_index = spr_player_gas
     }
 if hsp &lt; 0
     image_xscale=-1

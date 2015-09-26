@@ -9,6 +9,14 @@
     <sound>sound\snd_sponge_slurp</sound>
     <sound>sound\snd_hurt</sound>
     <sound>sound\snd_death</sound>
+    <sound>sound\snd_boss_die</sound>
+    <sound>sound\snd_boss_attack</sound>
+    <sound>sound\snd_sponge_hit</sound>
+    <sound>sound\snd_sponge_move</sound>
+    <sound>sound\bgm_interior</sound>
+    <sound>sound\bgm</sound>
+    <sound>sound\bgm_boss</sound>
+    <sound>sound\sound11</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -25,6 +33,7 @@
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_icebutton</sprite>
+    <sprite>sprites\spr_bossbutton</sprite>
     <sprite>sprites\hud_formselect</sprite>
     <sprite>sprites\spr_enemyreverse</sprite>
     <sprite>sprites\spr_platformreverse</sprite>
@@ -33,10 +42,17 @@
     <sprite>sprites\spr_finish</sprite>
     <sprite>sprites\spr_sign</sprite>
     <sprite>sprites\spr_interact</sprite>
+    <sprite>sprites\spr_boss</sprite>
+    <sprite>sprites\spr_tentacle</sprite>
+    <sprite>sprites\spr_tentaclestraight</sprite>
+    <sprite>sprites\spr_bossspike</sprite>
+    <sprite>sprites\spr_energy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -64,6 +80,16 @@
     <object>objects\obj_hurtzone</object>
     <object>objects\obj_finish</object>
     <object>objects\obj_sign</object>
+    <object>objects\obj_boss</object>
+    <object>objects\obj_tentacle_aim</object>
+    <object>objects\obj_tentacle</object>
+    <object>objects\obj_bossbutton1</object>
+    <object>objects\obj_bossbutton2</object>
+    <object>objects\obj_bossbutton3</object>
+    <object>objects\obj_bossbutton4</object>
+    <object>objects\obj_bossspike</object>
+    <object>objects\obj_energy</object>
+    <object>objects\par_bossbutton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

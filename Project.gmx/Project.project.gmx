@@ -12,15 +12,19 @@
     <sprite>sprites\spr_player_gas</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_platform</sprite>
+    <sprite>sprites\spr_platformh</sprite>
     <sprite>sprites\mask_platform</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_icebutton</sprite>
     <sprite>sprites\hud_formselect</sprite>
     <sprite>sprites\spr_enemyreverse</sprite>
+    <sprite>sprites\spr_platformreverse</sprite>
     <sprite>sprites\spr_checkpoint</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\check_key.gml</script>
@@ -31,12 +35,14 @@
     <object>objects\par_wall</object>
     <object>objects\ctrl_Controls</object>
     <object>objects\par_platform</object>
+    <object>objects\obj_platformh</object>
     <object>objects\par_ground</object>
     <object>objects\obj_door</object>
     <object>objects\obj_button</object>
     <object>objects\obj_icebutton</object>
     <object>objects\ctrl_Stats</object>
     <object>objects\obj_enemyreverse</object>
+    <object>objects\obj_platformreverse</object>
     <object>objects\obj_player_die</object>
     <object>objects\obj_checkpoint</object>
     <object>objects\par_enemy</object>

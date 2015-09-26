@@ -249,8 +249,13 @@ if (place_meeting(x,y+vsp,par_platform))
     var plat = instance_place(x,y+vsp,par_platform)
     if (plat.y &gt; y+31)
         {
+        //Moving platform
+        if place_meeting(x,y+vsp,obj_platformh)
+            {
+            x = x+plat.hsp
+            }
         while (!place_meeting(x,y+sign(vsp),par_platform)) {y+=sign(vsp)}
-        vsp=0
+            vsp=0
         }
     }
 

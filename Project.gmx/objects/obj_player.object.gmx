@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_player_ice</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -32,6 +32,7 @@ form = FORM_WATER
 animation = ANIM_STAND
 energy=100
 invincible=0
+icejump=true
 </string>
           </argument>
         </arguments>
@@ -109,6 +110,30 @@ else
         image_alpha = 1
         }
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///ice jump debounce
+icejump=true
 </string>
           </argument>
         </arguments>
@@ -198,13 +223,22 @@ var key_hsp = check_key(ctrls.key_right,0)-check_key(ctrls.key_left,0)
 if form != FORM_ICE
     {
     if (key_hsp) == 0 or animation == ANIM_RECOVER
-        {hsp/=1.2}
+        {
+        if !place_empty(x,y+4)
+        hsp/=1.2
+        else
+        hsp/=1.05
+        }
     else
         {hsp=key_hsp*3}
     }
-else
+else if !place_empty(x,y+4)
     {
     hsp/=1.05
+    if icejump==false and alarm[2]==-1
+        {
+        alarm[2]=10
+        }
     }
     
 //Jump and gravity
@@ -213,7 +247,13 @@ if form != FORM_GAS and animation != ANIM_RECOVER
     var vsp_jump;
     if (place_meeting(x,y+1,par_ground)) and check_key(ctrls.key_up,1)
         {
+        if form != FORM_ICE
         vsp=-12
+        else if icejump==true
+            {
+            icejump=false
+            vsp = -12
+            }
         }
     else
         {
@@ -259,7 +299,7 @@ if (place_meeting(x,y+vsp,par_platform))
         }
     }
 
-
+image_speed = hsp/20
 x=x+hsp
 y=y+vsp
 </string>

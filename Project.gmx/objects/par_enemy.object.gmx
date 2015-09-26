@@ -31,6 +31,7 @@ grav=.5
 state = AI_IDLE
 animation = ANIM_STAND
 invincible=0
+image_speed=.1
 </string>
           </argument>
         </arguments>
@@ -175,7 +176,7 @@ if (place_meeting(x,y+vsp,par_platform))
         }
     }
 
-
+image_speed = hsp/20
 x=x+hsp
 y=y+vsp
 </string>

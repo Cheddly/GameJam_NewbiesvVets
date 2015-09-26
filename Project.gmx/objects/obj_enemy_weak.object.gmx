@@ -97,7 +97,7 @@ if (place_meeting(x,y,obj_player))
         hsp = obj_player.hsp*1.5
         vsp=-6
         state = AI_RECOVER
-        alarm[1]=90
+        self.alarm[0] = 90
         }
     else if obj_player.invincible==0 and state != AI_RECOVER
         {

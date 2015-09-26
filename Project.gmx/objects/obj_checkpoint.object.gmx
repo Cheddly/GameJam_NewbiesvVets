@@ -54,6 +54,7 @@ if (place_meeting(x,y,obj_player)) and image_index==0
     with (obj_checkpoint) {image_index=0}
     image_index=1
     ctrl_Stats.checkpoint=x
+    obj_player.energy=100
     }
 </string>
           </argument>

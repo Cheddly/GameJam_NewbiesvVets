@@ -14,6 +14,7 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_player_ice</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemy_weak</sprite>
     <sprite>sprites\spr_player_gas</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_platform</sprite>
@@ -39,12 +40,14 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_enemy_weak</object>
+    <object>objects\obj_enemy</object>
     <object>objects\par_wall</object>
     <object>objects\ctrl_Controls</object>
     <object>objects\par_platform</object>
     <object>objects\obj_platformh</object>
     <object>objects\par_ground</object>
-    <object>objects\obj_door</object>
+    <object>objects\obj_door_down</object>
+    <object>objects\obj_door_left</object>
     <object>objects\obj_button</object>
     <object>objects\obj_icebutton</object>
     <object>objects\ctrl_Stats</object>
@@ -60,13 +63,14 @@
     <room>rooms\rm_start</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="11">
+  <constants number="12">
     <constant name="FORM_WATER">0</constant>
     <constant name="FORM_ICE">1</constant>
     <constant name="FORM_GAS">2</constant>
     <constant name="AI_IDLE">0</constant>
     <constant name="AI_FOLLOW">1</constant>
     <constant name="AI_RECOVER">2</constant>
+    <constant name="AI_DEAD">3</constant>
     <constant name="ANIM_CUSTOM">0</constant>
     <constant name="ANIM_STAND">1</constant>
     <constant name="ANIM_WALK">2</constant>

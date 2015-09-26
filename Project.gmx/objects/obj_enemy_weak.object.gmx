@@ -90,12 +90,12 @@
             <string>///Collision with player
 if (place_meeting(x,y,obj_player))
     {
-    if (obj_player.form == FORM_ICE and abs(obj_player.hsp) &gt;= abs (hsp) and state != AI_RECOVER )  
+    if (obj_player.form == FORM_ICE and abs(obj_player.hsp) &gt;= abs(hsp)+1 and state != AI_RECOVER )  
         {
+        var playerhsp = obj_player.hsp
         ///pushed back
-        //sound_play(snd_hurt)
         hsp = obj_player.hsp*1.5
-        vsp = -6
+        vsp=-6
         state = AI_RECOVER
         alarm[1]=90
         }
@@ -146,7 +146,7 @@ if hsp &lt; 0
     image_xscale=-1
 else if hsp &gt; 0
     image_xscale=1
-draw_self()
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,image_alpha)
 
 </string>
           </argument>

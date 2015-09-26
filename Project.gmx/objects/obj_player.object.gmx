@@ -409,7 +409,7 @@ if hsp &lt; 0
     image_xscale=-1
 else if hsp &gt; 0
     image_xscale=1
-draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,image_alpha)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,image_alpha)
 //draw_text(x,y+32,invincible)
 
 </string>

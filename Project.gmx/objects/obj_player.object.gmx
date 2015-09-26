@@ -28,6 +28,7 @@
             <string>hsp=0
 vsp=0
 grav=.375
+form = FORM_WATER
 </string>
           </argument>
         </arguments>
@@ -55,7 +56,11 @@ var ctrls = ctrl_Controls
 //Move left and right
 var key_hsp;
 key_hsp = keyboard_check(ctrls.key_right)-keyboard_check(ctrls.key_left)
-hsp=key_hsp*4
+if (key_hsp) == 0
+    {hsp/=1.2}
+else
+    {hsp=key_hsp*4}
+    
 //Jump and gravity
 var vsp_jump;
 if (place_meeting(x,y+1,par_wall)) and keyboard_check_pressed(ctrls.key_up)
@@ -70,8 +75,14 @@ else
 //Collision with the ground
 if (place_meeting(x,y+vsp,par_wall))
     {
-    while (!place_meeting(x,y+1,par_wall)) {y+=1}
+    while (!place_meeting(x,y+sign(vsp),par_wall)) {y+=sign(vsp)}
     vsp=0
+    }
+//Collision on the side
+if (place_meeting(x+hsp,y,par_wall))
+    {
+    while (!place_meeting(x+sign(hsp),y,par_wall)) {x+=sign(hsp)}
+    hsp=0
     }
 
 

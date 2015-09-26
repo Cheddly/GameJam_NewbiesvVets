@@ -20,6 +20,11 @@
     <room>rooms\rm_start</room>
     <room>rooms\room0</room>
   </rooms>
+  <constants number="3">
+    <constant name="FORM_WATER">0</constant>
+    <constant name="FORM_ICE">1</constant>
+    <constant name="FORM_GAS">2</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

@@ -1,14 +1,27 @@
- ,________________,
- |                |
- |    ,___________|
- |    |__________,
- |    |/|       [|
- |    |/|        |
+
+
+
+
+
+                     ,___________________________,
+                    /                             \
+                   |]            ______           [|
+                   |  ___                    ___   |
+                   |             ,     ,           |
+                   |]  ___       |\___/|    ___   [|
+                   |             |oOoOo|           |
+ ,_________________| ___         |ooo o|      ___  |
+ |                               | oooo|           |
+ |    ,_______+__________________|_____|__________[|
+ |    |__________,       |//////////|\\\\\\\\|
+ |    |/|       [|       |                   |
+ |    |/|        |       |/\/\/\/\/\/\/\/\/\/|
  |____|/|____   [|
         |        |
 ,_____,_|____   [|
 |     |/|        |
 |o_n__|/|_______[|
 
-Short map to tutorialize the whole "jumping at buttons and turning to ice midair" thing
- that's used a lot in the boss fight. Also it looks like a five. Whoops.
+Map that teaches the skills specific to the boss fight, then lets you run through them in an actual battle. Could also just end this map at the
+checkpoint if necessary because of boss AI or whatever. I'm kind of sleepy
+while doing this so really use your best judgement

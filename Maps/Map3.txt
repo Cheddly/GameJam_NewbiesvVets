@@ -1,0 +1,13 @@
+,_________,    ,__________________,
+|o______, |    |            X___, |
+        | |    |          _ |   | |    Nonlinear gameplay!
+        | |    |    _       |   | |    Sign at the crossroads saying something like
+        | |    |       _    |   | |    "Down: The Warrior's path, Right: The Sage's path"
+        | |____|   _        |   | |    or something equally cryptic given the choice between
+        | ,______,          |   | |    jumping over spikes and jumping over enemies.
+        |X|      |/\/\/\/\/\|   | |    Also a sign at the end to make sure the player goes to the right, since
+        | |_________,           | |    so far I don't know how to make that clear.
+        |           |           | |
+        |           |           | |
+        |-          |___________| |___
+        |F___S____S_X_______________X_
